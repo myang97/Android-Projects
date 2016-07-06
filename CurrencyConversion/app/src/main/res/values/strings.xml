@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CurrencyConversion</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="button_convert">CONVERT AT THIS RATE</string>
+
+    <string name="answer_text">Number of dollars to convert</string>
+</resources>

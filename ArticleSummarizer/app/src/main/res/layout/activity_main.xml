@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/askingForURL"
+        android:text="Enter Your URL:"
+        android:saveEnabled="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <AutoCompleteTextView
+        android:id="@+id/URLInput"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:saveEnabled="true"
+        android:layout_below="@+id/askingForURL"
+        android:hint="Enter URL Here: " />
+
+    <EditText
+        android:id="@+id/sentencesInput"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:saveEnabled="true"
+        android:layout_below="@+id/URLInput"
+        android:hint="Enter Number of Sentences Here: "
+        android:inputType="number"/>
+
+     <Button
+         android:id="@+id/sendLink"
+         android:layout_centerHorizontal="true"
+         android:text="Get Summarization"
+         android:layout_width="wrap_content"
+         android:saveEnabled="true"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/sentencesInput" />
+
+    <Button
+        android:id="@+id/reset"
+        android:text="Reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/sendLink"
+        android:onClick="resetting"/>
+
+    <TextView
+        android:id="@+id/URLHyperlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reset"
+        android:saveEnabled="true"
+        android:autoLink="web"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="20dp"/>
+
+
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/URLHyperlink" >
+
+    <TextView
+        android:id="@+id/resultLink"
+        android:layout_width="match_parent"
+        android:saveEnabled="true"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true" />
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
